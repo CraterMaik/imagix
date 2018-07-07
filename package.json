@@ -1,0 +1,24 @@
+{
+  "name": "imagix",
+  "version": "0.1.3",
+  "description": "Simple and clean image manipulation using jimp, npm package imagix",
+  "main": "index.js",
+  "keywords": [
+    "image",
+    "image manipulation",
+    "graphics",
+    "discord image",
+    "magick",
+    "png",
+    "jpg",
+    "jimp",
+    "imagix",
+    "resize"
+  ],
+  "author": "CraterMaik",
+  "license": "MIT",
+  "homepage": "https://github.com/CraterMaik",
+  "dependencies": {
+    "jimp": "^0.2.28"
+  }
+}
