@@ -77,13 +77,13 @@ color:
 ```js
 const { ImagixRead, ImagixFont, ImagixImage } = require('imagix');
 
-var nick = new ImagixFont('Nickname', 20, 100     
+var nick = new ImagixFont('Nickname', 20, 100,     
     {
         size: 32, 
         color: 'WHITE'
     });
 
-var info = new ImagixFont('name@gmail.com', 20, 300
+var info = new ImagixFont('name@gmail.com', 20, 300,
     {
         size: 16, 
         color: 'BLACK'
