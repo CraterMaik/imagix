@@ -1,6 +1,6 @@
 {
   "name": "imagix",
-  "version": "0.1.5",
+  "version": "0.2.2",
   "description": "Simple and clean image manipulation using jimp, npm package imagix",
   "main": "./src/index.js",
   "keywords": [
