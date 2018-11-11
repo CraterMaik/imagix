@@ -18,7 +18,7 @@ const { ImagixRead, ImagixFont, ImagixImage } = require('imagix');
 
 
 // create a new font to print, use the ImagixFont class
-var text1 = new ImagixFont('text to print', 20, 100,
+let text1 = new ImagixFont('text to print', 20, 100,
                 // text a print, point in X, point in Y       
     {
     //Options for a font
@@ -28,7 +28,7 @@ var text1 = new ImagixFont('text to print', 20, 100,
     });
 
 // create a new image to print, use the ImagixImage class
-var img1 = new ImagixImage('avatar.png', {
+let img1 = new ImagixImage('avatar.png', {
     //Options for a image
         x: 15,   // point in X
         y: 45,   // point in Y
@@ -47,14 +47,28 @@ const image = new ImagixRead('image-bg.png', [text1], [img1]);
 // if you have more than one font "[text1, text2, text3]" or images "[img1, img2]"
 
 
+//Metods options getBuffer, getWrite, getInks
 //print image manipulation
-image.getBuffer(buff => {
-        console.log(buff);
-        
-    });
 
+//getWrite
+image.getWrite('newImage.png');
+
+//getBuffer
+image.getBuffer(buff => {
+    console.log(buff);
+        
+});
+
+//getInks, opts for all Jimp's methods
+image.getInks(img => {
+    img.invert(function (err, img) {
+        img.write('newImgInvert.png');
+	});
+
+};
 
 ```
+
 
 ## OPTIONS A FONT
 ```js
@@ -77,19 +91,19 @@ color:
 ```js
 const { ImagixRead, ImagixFont, ImagixImage } = require('imagix');
 
-var nick = new ImagixFont('Nickname', 20, 100,     
+let nick = new ImagixFont('Nickname', 20, 100,     
     {
         size: 32, 
         color: 'WHITE'
     });
 
-var info = new ImagixFont('name@gmail.com', 20, 300,
+let info = new ImagixFont('name@gmail.com', 20, 300,
     {
         size: 16, 
         color: 'BLACK'
     });
 
-var avatar = new ImagixImage('www.example.com/asset/avatar.png', {
+let avatar = new ImagixImage('www.example.com/asset/avatar.png', {
         x: 15,
         y: 45,
         resize: 250
@@ -97,6 +111,10 @@ var avatar = new ImagixImage('www.example.com/asset/avatar.png', {
 
 const image = new ImagixRead('bg-profile-1.png', [nick, info], [avatar]);
 
+
+image.getWrite('./img/newProfile-1.png');
+
+//Or
 image.getBuffer(buff => {
     console.log(buff);
 

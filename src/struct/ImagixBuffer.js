@@ -10,6 +10,6 @@ module.exports = function (img, num, cant, buffer) {
                 
             }
             
-        })
+        });
     } 
 }

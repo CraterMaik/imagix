@@ -3,21 +3,17 @@ const { ImagixRead, ImagixFont, ImagixImage} = require('../src/index');
 
 let bgprofile = './img/red.png';
 
-let TextName = new ImagixFont('Hello World', 10, 50, {
+let textName = new ImagixFont('JavaScript Icon', 10, 50, {
     size: 32,
     color: 'WHITE'
-
 });
 
 let icon = new ImagixImage('./img/js-icon.png', {
-    x: 50,
-    y: 10,
-    resize: 10
+    x: 10,
+    y: 100,
+    resize: 200
 });
 
-const profile = new ImagixRead(bgprofile, [TextName], [icon]);
+const profile = new ImagixRead(bgprofile, [textName], [icon]);
 
-profile.getBuffer(image => {
-    console.log(image);
-    
-});
+profile.getWrite('./img/newProfile.png');
