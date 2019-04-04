@@ -32,7 +32,8 @@ let img1 = new ImagixImage('avatar.png', {
     //Options for a image
         x: 15,   // point in X
         y: 45,   // point in Y
-        resize: 130  //define the size of the image.
+        resizeX: 130,  //define  the size in X of the image.
+        resizeY: 120,  //define the size in Y of the image.
     });
 
 
@@ -104,10 +105,11 @@ let info = new ImagixFont('name@gmail.com', 20, 300,
     });
 
 let avatar = new ImagixImage('www.example.com/asset/avatar.png', {
-        x: 15,
-        y: 45,
-        resize: 250
-    });
+		x: 15,
+		y: 45,
+    resizeX: 250,
+		resizeY: 230
+});
 
 const image = new ImagixRead('bg-profile-1.png', [nick, info], [avatar]);
 
