@@ -11,7 +11,8 @@ let textName = new ImagixFont('JavaScript Icon', 10, 50, {
 let icon = new ImagixImage('./img/js-icon.png', {
     x: 10,
     y: 100,
-    resize: 200
+		resizeX: 200,
+		resizeY: 190
 });
 
 const profile = new ImagixRead(bgprofile, [textName], [icon]);
