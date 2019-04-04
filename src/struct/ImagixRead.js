@@ -63,7 +63,7 @@ class ImagixRead {
 						Jimp.read(imgs.Isrc, (err, images) => {
 							if (err) return console.log(err);
 
-							images.resize(imgs.Iresize, imgs.Iresize);
+							images.resize(imgs.IresizeX, imgs.IresizeY);
 							image.composite(images, imgs.IpointX, imgs.IpointY);
 							i++;
 							Write(image, i, img_length, src)
@@ -79,7 +79,7 @@ class ImagixRead {
 						Jimp.read(imgs.Isrc, (err, images) => {
 							if (err) return console.log(err);
 
-							images.resize(imgs.Iresize, imgs.Iresize);
+							images.resize(imgs.IresizeX, imgs.IresizeY);
 							image.composite(images, imgs.IpointX, imgs.IpointY);
 
 							listFont.forEach(function (fn) {
@@ -127,7 +127,7 @@ class ImagixRead {
 						Jimp.read(imgs.Isrc, (err, images) => {
 							if (err) return console.log(err);
 							
-							images.resize(imgs.Iresize, imgs.Iresize);
+							images.resize(imgs.IresizeX, imgs.IresizeY);
 							image.composite(images, imgs.IpointX, imgs.IpointY);
 							i++;
 							Buffer(image, i, img_length, buffer)
@@ -143,9 +143,9 @@ class ImagixRead {
 						Jimp.read(imgs.Isrc, (err, images) => {
 							if (err) return console.log(err);
 							
-							images.resize(imgs.Iresize, imgs.Iresize);
+							images.resize(imgs.IresizeX, imgs.IresizeY);
 							image.composite(images, imgs.IpointX, imgs.IpointY);
-
+							
 							listFont.forEach(function (fn) {
 
 								Jimp.loadFont(fn.fnt).then(font => {
@@ -197,7 +197,7 @@ class ImagixRead {
 						Jimp.read(imgs.Isrc, (err, images) => {
 							if (err) return console.log(err);
 
-							images.resize(imgs.Iresize, imgs.Iresize);
+							images.resize(imgs.IresizeX, imgs.IresizeY);
 							image.composite(images, imgs.IpointX, imgs.IpointY);
 							i++;
 							Inks(image, i, img_length, buffer);
@@ -213,7 +213,7 @@ class ImagixRead {
 						Jimp.read(imgs.Isrc, (err, images) => {
 							if (err) return console.log(err);
 
-							images.resize(imgs.Iresize, imgs.Iresize);
+							images.resize(imgs.IresizeX, imgs.IresizeY);
 							image.composite(images, imgs.IpointX, imgs.IpointY);
 
 							listFont.forEach(function (fn) {

@@ -33,10 +33,17 @@ class ImagixImage {
         this.IpointY = options.y || 10;
 
         /**
-         * size Image
+         * size X Image
          * @type {number}
          */
-        this.Iresize = options.resize || 100;
+
+				this.IresizeX = options.resizeX || 100;
+        /**
+         * size Y Image
+         * @type {number}
+         */
+				this.IresizeY = options.resizeY || 100;
+				
 
     }
 
