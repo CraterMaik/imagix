@@ -1,4 +1,4 @@
-var TypeFonts = require("./ImagixTypefont")
+let TypeFonts = require("./ImagixTypefont")
 /**
  * Options for a loadFont
  * @typedef {Object} FontOptions
@@ -46,7 +46,7 @@ class ImagixFont {
         this.color = options.color || 'BLACK';
         
 
-        var fnt;
+        let fnt;
         TypeFonts(this.size, this.color, (tf) =>{
             fnt = tf;
         })
