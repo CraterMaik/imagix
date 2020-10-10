@@ -1,4 +1,4 @@
-var TypeFonts = require("./ImagixTypefont")
+let TypeFonts = require("./ImagixTypefont")
 /**
  * Options for a loadFont
  * @typedef {Object} FontOptions
