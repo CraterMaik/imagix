@@ -46,7 +46,7 @@ class ImagixFont {
         this.color = options.color || 'BLACK';
         
 
-        var fnt;
+        let fnt;
         TypeFonts(this.size, this.color, (tf) =>{
             fnt = tf;
         })
