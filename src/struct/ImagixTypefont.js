@@ -1,4 +1,4 @@
-var Jimp = require("jimp");
+let Jimp = require("jimp");
 
 module.exports = function (size, color, _fnt) {
 
